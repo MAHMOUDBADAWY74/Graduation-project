@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="168.75" viewBox="0 0 1920 1080">
+  <defs>
+    <clipPath id="clip-logo">
+      <rect width="1920" height="1080"/>
+    </clipPath>
+  </defs>
+  <g id="logo" clip-path="url(#clip-logo)">
+    <!-- White background removed -->
+    <text id="كـTabook" transform="translate(429 577)" font-size="218" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">كـ</tspan><tspan y="0">Tabook</tspan></text>
+    <text id="_ـــ" data-name="ـــ" transform="translate(810 390)" fill="#707070" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="22">ـــ</tspan></text>
+    <text id="_ـــ-2" data-name="ـــ" transform="matrix(0.891, -0.454, 0.454, 0.891, 516.488, 653.871)" font-size="151" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">ـــ</tspan></text>
+  </g>
+</svg>
