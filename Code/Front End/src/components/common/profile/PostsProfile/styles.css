@@ -1,0 +1,18 @@
+.posts-profile .user-info {
+  width: 350px;
+  border: 1px #ccc solid;
+  padding: 15px 20px;
+  border-radius: 10px;
+  position: sticky;
+  top: 80px;
+  height: fit-content;
+}
+.input-hoppy {
+  border: none;
+}
+
+.input-hoppy:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}

@@ -1,0 +1,31 @@
+.bookreader-features-bar {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 10;
+    display: flex;
+    gap: 12px;
+}
+
+.bookreader-btn {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #eee;
+    color: #222;
+    cursor: pointer;
+}
+
+.bookreader-btn.active-light {
+    background: #eee;
+    color: #222;
+}
+
+.bookreader-btn.active-dark {
+    background: #222;
+    color: #eee;
+}
+
+.bookreader-btn.highlight {
+    margin-left: 16px;
+}

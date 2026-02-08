@@ -1,0 +1,111 @@
+.container-services {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 30px;
+  justify-content: space-between;
+}
+
+@media (max-width: 900px) {
+  .container-services {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .service {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .container-services {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .service {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 5px;
+  }
+}
+
+.service {
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
+  width: 330px;
+  margin-inline: auto;
+  padding: 15px 10px;
+  height: auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.service:hover {
+  transform: scale(1.04) translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+  background: #f8f9fa;
+}
+
+.service::after,
+.service::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 5px;
+  transition: width 0.4s cubic-bezier(.4, 2, .6, 1), background 0.3s;
+  background-color: #222;
+}
+
+.service::after {
+  top: 0;
+  right: 0;
+}
+
+.service::before {
+  left: 0;
+  bottom: 0;
+}
+
+.service:hover::after,
+.service:hover::before {
+  width: 200%;
+  background: linear-gradient(90deg, #222, #6c63ff, #222);
+}
+
+.service .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  transition: transform 0.4s cubic-bezier(.4, 2, .6, 1);
+}
+
+.service:hover .icon {
+  transform: rotate(-8deg) scale(1.15);
+  filter: drop-shadow(0 2px 8px #6c63ff88);
+}
+
+.service .card-title {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.3s;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.service:hover .card-title {
+  color: #6c63ff;
+}
+
+.service .card-text {
+  line-height: 1.2;
+  color: #444;
+  transition: color 0.3s;
+}
+
+.service:hover .card-text {
+  color: #222;
+}

@@ -1,0 +1,139 @@
+.book-card-responsive {
+    background: var(--color-card-bg);
+    border-radius: 16px;
+    box-shadow: 0 2px 12px var(--color-shadow);
+    padding: 18px 10px 14px 10px;
+    transition: box-shadow 0.3s, transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    min-width: 160px;
+    max-width: 220px;
+    margin: 0 auto;
+}
+
+.book-card-responsive:hover {
+    box-shadow: 0 8px 32px var(--color-shadow);
+    transform: scale(1.04) translateY(-4px);
+}
+
+.img-container-responsive {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.book-img-responsive {
+    width: 140px;
+    height: 200px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px var(--color-shadow);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.book-card-responsive:hover .book-img-responsive {
+    box-shadow: 0 8px 24px var(--color-shadow);
+    transform: scale(1.03) rotate(-2deg);
+}
+
+.book-author-responsive {
+    font-size: 1rem;
+    color: var(--color-accent);
+    opacity: 0.85;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.book-btn-responsive {
+    min-width: 70px;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 0.98rem;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 4px var(--color-shadow);
+}
+
+.book-btn-responsive:hover {
+    background: var(--color-brand);
+    color: var(--color-text-light);
+    box-shadow: 0 4px 16px var(--color-shadow);
+}
+
+.wishlist-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px var(--color-shadow);
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.img-container-responsive:hover .wishlist-btn,
+.wishlist-btn.active {
+    opacity: 1;
+    /* Show on hover */
+    transform: scale(1);
+}
+
+/* Always show if it's active (in wishlist) */
+.wishlist-btn .wishlist-icon.active {
+    color: #e74c3c;
+}
+
+.wishlist-btn:hover {
+    transform: scale(1.1);
+    background: white;
+}
+
+.wishlist-icon {
+    font-size: 18px;
+    color: #aaa;
+    transition: all 0.2s ease;
+}
+
+.wishlist-btn:hover .wishlist-icon {
+    color: #e74c3c;
+}
+
+@media (max-width: 900px) {
+    .book-card-responsive {
+        max-width: 180px;
+        padding: 12px 4px 10px 4px;
+    }
+
+    .book-img-responsive {
+        width: 110px;
+        height: 160px;
+    }
+}
+
+@media (max-width: 600px) {
+    .book-card-responsive {
+        max-width: 98vw;
+        min-width: 120px;
+        padding: 8px 2px 8px 2px;
+    }
+
+    .book-img-responsive {
+        width: 90px;
+        height: 120px;
+    }
+
+    .book-author-responsive {
+        display: none;
+    }
+}

@@ -1,0 +1,123 @@
+.landing {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+}
+
+.landing::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  top: 0;
+  left: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.bg1 {
+  background-image: url("src/assets/landing/landing1.png");
+  animation: fade-in-out 12s ease-in-out infinite;
+  z-index: 1;
+}
+
+.bg2 {
+  background-image: url("src/assets/landing/landing3.png");
+  animation: fade-in-out-reverse 12s ease-in-out infinite;
+  z-index: 2;
+}
+@keyframes fade-in-out {
+  0%,
+  40% {
+    opacity: 1;
+  }
+  50%,
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-out-reverse {
+  0%,
+  40% {
+    opacity: 0;
+  }
+  50%,
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.landing .text {
+  position: absolute;
+  color: white;
+  z-index: 4;
+  left: 50%;
+  font-size: 30px;
+  line-height: 1.1;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 400px;
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+  padding: 15px 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition-speed);
+}
+@media (width < 576px) {
+  .landing .text {
+    font-size: 24px;
+    padding: 15px 10px;
+  }
+}
+.landing .text p {
+  margin-bottom: 5px;
+  font-family: "Raleway", sans-serif;
+}
+.landing .text div {
+  padding: 15px 20px;
+  color: white;
+  border-radius: 10px;
+  margin: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: fit-content;
+  display: flex;
+  font-weight: 700;
+  cursor: pointer;
+
+  font-size: 20px;
+
+  align-items: center;
+  gap: 10px;
+  a {
+    color: white;
+    font-size: 16px;
+  }
+}
+.arrow-right {
+  position: relative;
+  transition: transform var(--transition-speed);
+}
+.container-arrow-right:hover .arrow-right {
+  animation: shake-horizontal alternate 1s linear infinite;
+}

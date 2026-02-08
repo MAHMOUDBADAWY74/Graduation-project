@@ -1,0 +1,25 @@
+/* arrow */
+.arrow {
+  position: absolute;
+  top: 50%;
+  background: #fef9f3;
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  display: flex;
+}
+
+.prev-arrow {
+  left: 0;
+}
+
+.next-arrow {
+  right: 0;
+}

@@ -1,0 +1,157 @@
+.about-card {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.about-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.about-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  padding-left: 35%;
+  margin: 0;
+}
+
+.edit-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  padding: 8px;
+  transition: color 0.2s;
+}
+
+.edit-btn:hover {
+  color: #000;
+}
+
+.about-info p {
+  margin: 6px 0;
+  font-size: 16px;
+  color: #444;
+}
+
+.about-section {
+  margin-top: 20px;
+}
+
+.about-section h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.bio {
+  font-style: italic;
+  color: #666;
+}
+
+.badge-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.badge {
+  background-color: #f0f4f8;
+  color: #333;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.remove-icon {
+  margin-left: 6px;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s;
+}
+
+.remove-icon:hover {
+  color: #d11a2a;
+}
+
+.add-input {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.add-input input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+}
+
+.add-input input:focus {
+  outline: none;
+  border-color: #2196f3;
+  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+  background: white;
+}
+
+.add-input button {
+  background: linear-gradient(45deg, #2196f3, #1976d2);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.add-input button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+}
+
+.add-input button:active {
+  transform: translateY(0);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 6px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.save-btn {
+  background-color: #517294;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+  margin: 30px auto 0 auto;
+  transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+  background-color: #007bff;
+}

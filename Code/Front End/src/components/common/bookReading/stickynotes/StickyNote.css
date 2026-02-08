@@ -1,0 +1,57 @@
+.sticky-note {
+    position: absolute;
+    background: linear-gradient(145deg, #fffecb, #f7f3a6);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+    width: 180px;
+    z-index: 10;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+    cursor: grab;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sticky-note.dragging {
+    z-index: 1000;
+    cursor: grabbing;
+    transition: none;
+}
+
+.sticky-note-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.sticky-note-move {
+    font-size: 14px;
+    color: #333;
+    cursor: move;
+    padding: 2px 4px;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.sticky-note-delete {
+    background: none;
+    border: none;
+    color: #e63946;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0 4px;
+}
+
+.sticky-note-textarea {
+    width: 100%;
+    resize: none;
+    background: transparent;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    border-style: none;
+    padding: 6px;
+    color: #333;
+}

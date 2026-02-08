@@ -1,0 +1,35 @@
+.quotes {
+  background-color: #f9f9f9;
+  padding: 30px 0;
+  background-image: url("src/assets/landing/quote.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 300px;
+}
+
+.quotes .quoteCard {
+  padding: 15px;
+  margin: 40px auto;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  q {
+    color: white;
+  }
+}
+
+.quotes .quoteText {
+  font-size: 22px;
+  font-style: italic;
+}
+
+.quotes .author {
+  margin-top: 10px;
+  font-size: 16px;
+  color: white;
+  padding-right: 20px;
+  text-align: right;
+}

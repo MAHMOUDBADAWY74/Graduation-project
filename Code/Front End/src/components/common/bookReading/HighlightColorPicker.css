@@ -1,0 +1,19 @@
+.highlight-color-picker {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.highlight-color-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.highlight-color-btn.selected {
+    border: 2px solid #333;
+}

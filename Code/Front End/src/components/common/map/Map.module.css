@@ -1,0 +1,32 @@
+.map {
+  height: 100vh;
+  position: relative;
+}
+
+.mapContainer {
+  height: 100%;
+  width: 100%;
+}
+
+/* Custom styles for slider arrows */
+:global(.slick-prev),
+:global(.slick-next) {
+  color: black !important;
+}
+
+:global(.slick-prev:before),
+:global(.slick-next:before) {
+  color: black !important;
+}
+
+.requestCount {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  background-color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  font-weight: 500;
+}
