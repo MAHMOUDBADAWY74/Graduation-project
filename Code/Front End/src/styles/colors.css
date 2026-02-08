@@ -1,0 +1,58 @@
+:root {
+  /* New color palette */
+  --color-bg-beige: #f5f2e9;
+  --color-field-beige: #e8e4d8;
+  --color-button-brown: #5d4037;
+  --color-button-brown-hover: #6d4c41;
+  --color-text-dark: #3e2723;
+  --color-text-light: #ffffff;
+  --color-shadow: rgba(0, 0, 0, 0.2);
+
+  /* Updating existing colors */
+  --color-brand: #5d4037;
+  --color-brand-hover: #6d4c41;
+
+  --color-accent: #8d6e63;
+  --color-accent-hover: #795548;
+
+  /* Backgrounds */
+  --color-bg-light: #f5f2e9;
+  --color-bg-light-alt: #e8e4d8;
+  --color-card-bg: #ffffff;
+  --color-card-hover: #f5f2e9;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  transition: all var(--transition-speed);
+  cursor: pointer;
+  border: none;
+}
+
+.button-second {
+  background-color: var(--color-accent);
+  color: white;
+  font-weight: 700;
+}
+
+.button-second:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.button-primary {
+  background-color: var(--color-brand);
+  color: white;
+  font-weight: 600;
+}
+
+.button-primary:hover {
+  background-color: var(--color-brand-hover);
+  color: white;
+  font-weight: 600;
+}

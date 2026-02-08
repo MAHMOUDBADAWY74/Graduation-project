@@ -1,0 +1,23 @@
+/* Reset and base styles */
+:root {
+  --primary-color: #5d4037;
+  --secondary-color: #8d6e63;
+  --success-color: #5d4037;
+  --danger-color: #a1887f;
+  --warning-color: #d7ccc8;
+  --info-color: #8d6e63;
+  --light-color: #f5f2e9;
+  --dark-color: #3e2723;
+  --font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, sans-serif;
+  --border-radius: 4px;
+  --box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  --section-color: #f5f2e9;
+  --transition-speed: 0.5s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
