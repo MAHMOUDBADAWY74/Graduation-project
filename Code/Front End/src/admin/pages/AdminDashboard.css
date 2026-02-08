@@ -1,0 +1,134 @@
+.admin-cards-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2px;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+h3,
+h5 {
+  padding-bottom: 20px;
+  color: rgba(0, 0, 0, 0.605);
+}
+
+.postscharts {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  gap: 2px;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.admin-dashboard-root {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f7f8fa;
+  min-height: 100vh;
+  padding: 32px 0;
+}
+
+.admin-dashboard-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 32px;
+}
+
+.admin-dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.admin-dashboard-title {
+  font-weight: 700;
+  font-size: 28px;
+  color: #2d3748;
+  margin: 0;
+}
+
+.admin-dashboard-barchart {
+  margin-bottom: 32px;
+}
+
+.admin-dashboard-summary-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.admin-dashboard-summary-title {
+  font-weight: 600;
+  font-size: 20px;
+  color: #374151;
+  margin: 0;
+}
+
+.admin-dashboard-summary-divider {
+  flex: 1;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+.admin-dashboard-cards {
+  gap: 24px !important;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.admin-dashboard-card {
+  flex: 1;
+  min-width: 220px;
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.admin-dashboard-postscharts {
+  gap: 24px !important;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.admin-dashboard-postschart {
+  flex: 2;
+  min-width: 320px;
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-dashboard-postscard {
+  flex: 1;
+  min-width: 220px;
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pdf-button {
+  background: #4f8cff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(79, 140, 255, 0.08);
+  transition: background 0.2s;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.pdf-button:hover {
+  background: #2563eb;
+}

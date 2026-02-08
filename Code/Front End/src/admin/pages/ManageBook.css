@@ -1,0 +1,322 @@
+.managebooks {
+  color: rgba(0, 0, 0, 0.605);
+  font-size: medium;
+  padding-top: 70px;
+  width: 100%;
+}
+
+h2 {
+  font-size: 60px;
+}
+
+.allBooks {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #b0b0b0;
+}
+
+th {
+  background: #7c7c7cfc;
+  color: rgb(255, 255, 255);
+}
+
+tr:hover {
+  background: #f1f1f1;
+}
+
+.saveBook {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #f1f1f1;
+  background-color: black;
+  transition: 0.3s;
+}
+
+.editBook-btn {
+  background: #0116ff9c;
+  color: white;
+  margin-right: 5px;
+}
+
+.deleteBook-btn {
+  background: #ff0606d6;
+  color: white;
+}
+
+.editBook-btn:hover {
+  background: #0a6cffc0;
+}
+
+.deleteBook-btn:hover {
+  background: #c82333;
+}
+
+.editBook-form {
+  margin-top: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.editBook-form input,
+.editBook-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.editBook-form button {
+  margin-right: 10px;
+}
+
+.editBook-form button :hover {
+  background-color: #b0b0b0;
+}
+
+.book-cover-img {
+  width: 50px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  background: #f3f3f3;
+  display: block;
+  margin: 0 auto;
+}
+
+.managebooks-page-bg {
+  background: #f5f7fa;
+  min-height: 100vh;
+}
+
+.managebooks-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.10);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.modern-table {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  background: #fff;
+  margin-bottom: 0;
+}
+
+.table-responsive {
+  margin-bottom: 0;
+}
+
+.pagination-nav {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .pagination-nav {
+    width: auto;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .pagination-nav {
+    margin-top: 1.5rem;
+    width: 100%;
+  }
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.2rem;
+  margin-right: 6px;
+  background: #f3f6fa;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+  cursor: pointer;
+  outline: none;
+}
+
+.icon-btn:last-child {
+  margin-right: 0;
+}
+
+.editBook-btn.icon-btn {
+  color: #1976d2;
+}
+
+.deleteBook-btn.icon-btn {
+  color: #d32f2f;
+}
+
+.editBook-btn.icon-btn:hover {
+  background: #e3f2fd;
+  color: #0d47a1;
+}
+
+.deleteBook-btn.icon-btn:hover {
+  background: #ffebee;
+  color: #b71c1c;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.18);
+  padding: 0 2.5rem 1.5rem 2.5rem;
+  max-width: 420px;
+  width: 100%;
+  position: relative;
+  animation: modalIn 0.2s cubic-bezier(.4, 0, .2, 1);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  background: linear-gradient(90deg, #1976d2 60%, #2196f3 100%);
+  color: #fff;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  padding: 1.2rem 2.5rem 1rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin: 0 -2.5rem 1.5rem -2.5rem;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.modal-close {
+  position: static;
+  background: none;
+  border: none;
+  font-size: 1.7rem;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffeb3b;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  margin-bottom: 0;
+  border-radius: 8px;
+  border: 1.5px solid #e3e3e3;
+  padding: 10px 14px;
+  font-size: 1rem;
+  background: #f8fafd;
+  transition: border 0.2s;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus {
+  border: 1.5px solid #1976d2;
+  outline: none;
+  background: #fff;
+}
+
+.modal-content button.saveBook {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #1976d2 60%, #2196f3 100%);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.modal-content button.saveBook:hover {
+  background: linear-gradient(90deg, #1565c0 60%, #1976d2 100%);
+}
+
+.modal-content button[type="button"] {
+  width: 100%;
+  background: #f3f3f3;
+  color: #333;
+  border-radius: 8px;
+  border: none;
+  padding: 12px 0;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.modal-content button[type="button"]:hover {
+  background: #e0e0e0;
+}
+
+@keyframes modalIn {
+  from {
+    transform: translateY(40px) scale(0.98);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "Rana",
+      "email": "Rana@example.com",
+      "role": "moderator",
+      "isBlocked": true,
+      "communityId": 3
+    },
+    {
+      "id": "2",
+      "username": "sara",
+      "email": "sara@example.com",
+      "user": "ali",
+      "role": "moderator",
+      "isBlocked": false,
+      "communityId": 2
+    },
+    {
+      "id": "3",
+      "username": "brazily",
+      "email": "brazily@example.com",
+      "role": "user",
+      "isBlocked": false,
+      "communityId": null
+    },
+    {
+      "id": "4",
+      "username": "brazily",
+      "email": "brazily@example.com",
+      "role": "user",
+      "isBlocked": false,
+      "communityId": null
+    },
+    {
+      "id": "5",
+      "username": "brazily",
+      "email": "brazily@example.com",
+      "role": "user",
+      "isBlocked": false,
+      "communityId": null
+    },
+    {
+      "id": "6",
+      "username": "brazily",
+      "email": "brazily@example.com",
+      "role": "user",
+      "isBlocked": false,
+      "communityId": null
+    },
+    {
+      "id": "7",
+      "username": "brazily",
+      "email": "brazily@example.com",
+      "role": "user",
+      "isBlocked": false,
+      "communityId": null
+    },
+    {
+      "id": "8",
+      "username": "brazily",
+      "email": "brazily@example.com",
+      "role": "user",
+      "isBlocked": false,
+      "communityId": null
+    },
+    {
+      "id": "9",
+      "username": "brazily",
+      "email": "brazily@example.com",
+      "role": "user",
+      "isBlocked": false,
+      "communityId": null
+    },
+    {
+      "id": "10",
+      "username": "brazily",
+      "email": "brazily@example.com",
+      "role": "user",
+      "isBlocked": false,
+      "communityId": null
+    },
+    {
+      "id": "11",
+      "username": "brazily",
+      "email": "brazily@example.com",
+      "role": "user",
+      "isBlocked": false,
+      "communityId": null
+    },
+    {
+      "id": "12",
+      "username": "brazily",
+      "email": "brazily@example.com",
+      "role": "user",
+      "isBlocked": false,
+      "communityId": null
+    },
+    {
+      "id": "13",
+      "username": "brazily",
+      "email": "brazily@example.com",
+      "role": "user",
+      "isBlocked": false,
+      "communityId": null
+    },
+    {
+      "id": "14",
+      "username": "brazily",
+      "email": "brazily@example.com",
+      "role": "user",
+      "isBlocked": false,
+      "communityId": null
+    }
+  ],
+  "communities": [
+    {
+      "id": "1",
+      "name": "science fiction"
+    },
+    {
+      "id": "2",
+      "name": "Horror"
+    },
+    {
+      "id": "3",
+      "name": "comedy"
+    },
+    {
+      "id": "4",
+      "name": "kids"
+    },
+    {
+      "id": "5",
+      "name": "romance"
+    }
+  ],
+  "books": [
+    {
+      "id": "2",
+      "title": "Book Title 2",
+      "author": "Author 2",
+      "category": "Category 2",
+      "description": "Description of Book 2",
+      "content": "content of book 2"
+    },
+    {
+      "id": "3",
+      "title": "title4",
+      "author": "raana",
+      "category": "romance",
+      "description": "new",
+      "content": "asdgg"
+    },
+    {
+      "id": "4",
+      "title": "title4",
+      "author": "raana",
+      "category": "romance",
+      "description": "new",
+      "content": "asdgg"
+    },
+    {
+      "id": "5",
+      "title": "title4",
+      "author": "raana",
+      "category": "romance",
+      "description": "new",
+      "content": "asdgg"
+    },
+    {
+      "id": "6",
+      "title": "title4",
+      "author": "raana",
+      "category": "romance",
+      "description": "new",
+      "content": "asdgg"
+    }
+  ],
+  "posts": [
+    {
+      "id": "2",
+      "content": "this book is so amazing and my child loved it so much",
+      "communityId": 2,
+      "createdAt": "12/5/2025",
+      "userId": 3,
+      "imgUrl": "kjkj"
+    },
+    {
+      "id": "3",
+      "content": "this book is so amazing and my child loved it so much",
+      "communityId": 2,
+      "createdAt": "12/5/2025",
+      "userId": 3,
+      "imgUrl": "kjkj"
+    },
+    {
+      "id": "5",
+      "content": "this book is so amazing and my child loved it so much",
+      "communityId": 2,
+      "createdAt": "12/5/2025",
+      "userId": 3,
+      "imgUrl": "kjkj"
+    },
+    {
+      "id": "6",
+      "content": "this book is so amazing and my child loved it so much jkdfdlfgdgdfgd",
+      "communityId": 2,
+      "createdAt": "12/5/2025",
+      "userId": 3,
+      "imgUrl": "kjkj"
+    }
+  ],
+  "postsCount": [
+    {
+      "communityID": "1",
+      "postCount": 10
+    },
+    {
+      "communityID": "2",
+      "postCount": 11
+    },
+    {
+      "communityID": "3",
+      "postCount": 4
+    },
+    {
+      "communityID": "4",
+      "postCount": 15
+    },
+    {
+      "communityID": "5",
+      "postCount": 20
+    }
+  ]
+}

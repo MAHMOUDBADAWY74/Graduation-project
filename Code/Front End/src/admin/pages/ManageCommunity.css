@@ -1,0 +1,108 @@
+.managecommunities {
+  color: rgba(0, 0, 0, 0.605);
+  font-size: medium;
+  padding-top: 70px;
+
+
+}
+
+h2 {
+  font-size: 60px;
+}
+
+.allCommunities {
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #b0b0b0;
+}
+
+th {
+  background: #7c7c7cfc;
+  color: rgb(255, 255, 255);
+}
+
+tr:hover {
+  background: #f1f1f1;
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.edit-community-btn {
+  background: #0116ff9c;
+  color: white;
+  margin-right: 5px;
+}
+
+.delete-community-btn {
+  background: #ff0606d6;
+  color: white;
+}
+
+.edit-community-btn:hover {
+  background: #0a6cffc0;
+}
+
+.delete-community-btn:hover {
+  background: #c82333;
+}
+
+.edit-form {
+  margin-top: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.edit-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.edit-form button {
+  margin-right: 10px;
+}
+
+.edit-form button:hover {
+  background-color: #b0b0b0;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.save-community-btn {
+  background: #000000;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-community-btn {
+  background: #ff0000;
+  color: rgb(255, 255, 255);
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

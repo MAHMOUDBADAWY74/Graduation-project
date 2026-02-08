@@ -1,0 +1,29 @@
+.totalcommunitiesCard{
+    flex: 1 1 30%; /* النمو + الانكماش + الأساس */
+    min-width: 250px; /* علشان ميصغروش أوي */
+    max-width: 300px; /* علشان ميكبروش أوي */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    background-color: #a4ac11;
+    color: white;
+    text-align: center;
+   
+    
+  }
+  .communitiesCount{
+    font-size: 32px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  .totalcommunitiesCard {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .totalcommunitiesCard:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
