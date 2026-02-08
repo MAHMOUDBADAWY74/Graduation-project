@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>سجل التحويلات</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light text-dark">
+
+<div class="container mt-5">
+  <h1 class="text-center mb-4">📜 سجل التحويلات السابقة</h1>
+
+  {% if transcripts %}
+    <div class="text-center mb-4">
+      <p>🔢 عدد التحويلات: <strong>{{ total_count }}</strong></p>
+      <p>📚 عدد الكلمات (تقريبًا): <strong>{{ total_words }}</strong></p>
+      <a href="/download_txt" class="btn btn-success">⬇️ تحميل بصيغة TXT</a>
+      <a href="/delete_all" onclick="return confirm('هل أنت متأكد من حذف الكل؟')" class="btn btn-danger ms-2">🗑️ حذف الكل</a>
+    </div>
+
+    <div class="accordion" id="transcriptAccordion">
+      {% for t in transcripts %}
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading{{ t[0] }}">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse{{ t[0] }}" aria-expanded="false">
+              🗓️ {{ t[2] }}
+            </button>
+          </h2>
+          <div id="collapse{{ t[0] }}" class="accordion-collapse collapse" data-bs-parent="#transcriptAccordion">
+            <div class="accordion-body">
+              <p>{{ t[1] }}</p>
+              <a href="/delete/{{ t[0] }}" onclick="return confirm('حذف هذا السجل؟')" class="btn btn-sm btn-outline-danger">🗑️ حذف</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="alert alert-warning text-center">
+      لا يوجد تحويلات محفوظة بعد.
+    </div>
+  {% endif %}
+
+  <div class="text-center mt-4">
+    <a href="/" class="btn btn-outline-primary">🔙 العودة للرئيسية</a>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>نظام تحويل النص إلى صوت مع الترجمة</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Add custom styles if needed */
+    .error-message {
+      color: red;
+      font-weight: bold;
+    }
+    /* Center the main content */
+    .main-content {
+        max-width: 600px; /* Adjust width as needed */
+        margin: auto;
+    }
+  </style>
+</head>
+<body class="bg-light text-dark">
+
+<div class="container mt-5">
+  <h1 class="text-center mb-4">📖 نظام تحويل النص إلى صوت مع الترجمة</h1>
+
+  <!-- Display Error Messages -->
+  {% if error_message %}
+    <div class="alert alert-danger text-center main-content">
+      <p class="error-message">⚠️ خطأ: {{ error_message }}</p>
+    </div>
+  {% endif %}
+
+  <!-- Removed the row structure as there's only one main function now -->
+  <!-- <div class="row"> -->
+    <!-- Removed the col-md-6 for STT -->
+    <!-- <div class="col-md-6"> ... </div> -->
+
+    <!-- Text-to-Speech section, now centered -->
+    <div class="main-content">
+      <div class="card p-3 mb-3">
+        <h4>📝 تحويل نص إلى صوت (مع الترجمة)</h4>
+        <form method="POST">
+          <div class="mb-3">
+            <label for="text_input" class="form-label">أدخل النص هنا (سيتم اكتشاف اللغة تلقائياً):</label>
+            <!-- Retain input text after submission -->
+            <textarea name="text_input" id="text_input" rows="4" class="form-control" placeholder="اكتب النص هنا..." required>{{ input_text }}</textarea>
+          </div>
+          <div class="mb-3">
+            <label for="lang" class="form-label">اختر لغة الصوت الناتج:</label>
+            <select name="lang" id="lang" class="form-select">
+              <!-- Add more languages supported by gTTS as needed -->
+              <option value="ar" {% if selected_target_lang == "ar" %}selected{% endif %}>العربية (Arabic)</option>
+              <option value="en" {% if selected_target_lang == "en" %}selected{% endif %}>الإنجليزية (English)</option>
+              <option value="fr" {% if selected_target_lang == "fr" %}selected{% endif %}>الفرنسية (French)</option>
+              <option value="es" {% if selected_target_lang == "es" %}selected{% endif %}>الإسبانية (Spanish)</option>
+              <option value="de" {% if selected_target_lang == "de" %}selected{% endif %}>الألمانية (German)</option>
+              <option value="ja" {% if selected_target_lang == "ja" %}selected{% endif %}>اليابانية (Japanese)</option>
+              <option value="ko" {% if selected_target_lang == "ko" %}selected{% endif %}>الكورية (Korean)</option>
+              <option value="ru" {% if selected_target_lang == "ru" %}selected{% endif %}>الروسية (Russian)</option>
+              <option value="zh-cn" {% if selected_target_lang == "zh-cn" %}selected{% endif %}>الصينية المبسطة (Chinese Simplified)</option>
+              <!-- Add more languages here -->
+              <option value="hi" {% if selected_target_lang == "hi" %}selected{% endif %}>الهندية (Hindi)</option>
+              <option value="it" {% if selected_target_lang == "it" %}selected{% endif %}>الإيطالية (Italian)</option>
+              <option value="pt" {% if selected_target_lang == "pt" %}selected{% endif %}>البرتغالية (Portuguese)</option>
+              <option value="tr" {% if selected_target_lang == "tr" %}selected{% endif %}>التركية (Turkish)</option>
+            </select>
+          </div>
+          <!-- Speed selection removed as gTTS uses slow=True/False -->
+          <button type="submit" class="btn btn-success">تحويل النص إلى صوت</button>
+        </form>
+
+        {% if audio_path_relative %}
+          <div class="mt-3">
+            <h5>🎧 الصوت الناتج:</h5>
+            <!-- Use url_for to generate the correct path to the static file -->
+            <audio controls class="w-100">
+                <source src="{{ url_for('static', filename=audio_path_relative) }}" type="audio/mpeg">
+                متصفحك لا يدعم عنصر الصوت.
+            </audio>
+            <a href="{{ url_for('static', filename=audio_path_relative) }}" class="btn btn-outline-primary mt-2" download>⬇️ تحميل الصوت</a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  <!-- </div> --> <!-- End of removed row -->
+
+  {% if conversion_time %}
+    <div class="alert alert-info mt-4 text-center main-content">
+      ⏱️ وقت المعالجة: {{ conversion_time }} ثانية
+    </div>
+  {% endif %}
+
+  <!-- Removed link to history page -->
+  <!-- <div class="text-center mt-4"> ... </div> -->
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
