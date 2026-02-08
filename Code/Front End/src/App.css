@@ -1,0 +1,104 @@
+/* Global Styles */
+body {
+  font-family: "New Amsterdam", serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.nav {
+  cursor: pointer;
+}
+
+/* Login & Register Forms */
+.login form,
+.register form,
+.contact form {
+  width: 400px;
+  box-shadow: var(--box-shadow);
+}
+
+.login form p:last-of-type,
+.register form p:last-of-type {
+  font-size: 12px;
+}
+
+.register form {
+  width: 600px;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: var(--header-color);
+}
+
+.header {
+  box-shadow: var(--box-shadow);
+}
+
+.navbar-nav .nav-link {
+  margin: 0 10px;
+  position: relative;
+  border-bottom: solid 2px transparent;
+  transition: var(--transition-speed);
+}
+
+/* Active Link Styling */
+.navbar-nav .nav-link.active {
+  border-bottom: solid 2px black;
+  font-weight: 600;
+}
+
+/* About Section */
+.about {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+}
+
+@media (max-width: 768px) {
+  .about {
+    display: block;
+  }
+}
+
+div.login {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+}
+
+/* Buttons inside About Section */
+.about .btn.sign-up {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 50px;
+}
+
+.about .btn.login {
+  background-color: #ccc;
+  color: #000000;
+  left: 65px;
+  padding: 10px 50px 10px 120px;
+}
+
+/* Image inside About Section */
+.about img,
+.login img {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  position: relative;
+  width: 100%;
+}
+
+.contact form {
+  margin-inline: auto;
+}
+
+@media (max-width: 767px) {
+  .contact form {
+    width: 100%;
+  }
+}
